@@ -5,42 +5,41 @@ int main() {
     char nome[50];
     float notas[4];
     float media;
-   
+    int i;
     // Solicita o nome do aluno
     printf("Digite o nome do aluno: ");
     scanf("%s", nome);
    
     // Solicita as notas do aluno
     printf("Digite as 4 notas do aluno:\n");
-    for (int i = 0; i < 4; i++) {
+    for ( i = 0; i < 4; i++) {
         printf("Nota %d: ", i+1);
         scanf("%f", &notas[i]);
     }
    
-    // Calcula a média aritmética
+    // Calcula a mÃ©dia aritmÃ©tica
     media = 0;
-    for (int i = 0; i < 4; i++) {
+    for ( i = 0; i < 4; i++) {
         media += notas[i];
     }
     media /= 4;
    
-    // Verifica a situação do aluno
+    // Verifica a situaÃ§Ã£o do aluno
     printf("\nDados do aluno:\n");
     printf("Nome: %s\n", nome);
     printf("Notas: ");
-    for (int i = 0; i < 4; i++) {
+    for ( i = 0; i < 4; i++) {
         printf("%.1f ", notas[i]);
     }
-    printf("\nMédia: %.2f\n", media);
+    printf("\nMÃ©dia: %.2f\n", media);
    
     if (media >= 7.0) {
-        printf("Situação: Aprovado\n");
+        printf("SituaÃ§Ã£o: Aprovado\n");
     } else if (media >= 5.0 && media <= 6.9) {
-        printf("Situação: Recuperação\n");
+        printf("SituaÃ§Ã£o: RecuperaÃ§Ã£o\n");
     } else {
-        printf("Situação: Reprovado\n");
+        printf("SituaÃ§Ã£o: Reprovado\n");
     }
    
     return 0;
 }
-
